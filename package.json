@@ -1,0 +1,34 @@
+{
+  "name": "sync-github-followers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd -r tsconfig-paths/register --inspect=4321 --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosZoft/sync-github-followers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosZoft/sync-github-followers/issues"
+  },
+  "homepage": "https://github.com/CarlosZoft/sync-github-followers#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.15",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
+  }
+}
