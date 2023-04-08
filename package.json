@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node ./build/index.js",
     "dev": "tsnd -r tsconfig-paths/register --inspect=4321 --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "repository": {
