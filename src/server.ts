@@ -13,7 +13,10 @@ app.post(
 
       response.send("Success");
     } catch (error) {
-      response.status(500).send("Unexpected error")
+      if (error instanceof Error) {
+        response.status(400).send(error?.message);
+      }
+      response.status(500).send("Internal Server Error");
     }
   }
 );
