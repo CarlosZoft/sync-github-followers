@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/CarlosZoft/sync-github-followers.git"
   },
+  "engines": {
+    "node": ">=v18.12.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
