@@ -6,7 +6,7 @@ For running the app and sync your followers / following
 #### Before All :
 **Enviroment - Node >= v18**
 
-1 - Create one personal access token :
+1 - Create a personal access token :
 
 ![personal access token](./assets/personalaccesstoken.png)
 
