@@ -5,18 +5,10 @@ export async function* asyncGeneratorPaginate(
   page: number = 1
 ) {
   while (true) {
-    try {
-      const data = await func(...args, limit, page);
-      page++;
+    const data = await func(...args, limit, page);
+    page++;
 
-      yield data;
-      if (data.length < limit) break;
-    } catch (error) {
-      console.warn(`exception during fetch`, error);
-      yield {
-        done: true,
-        value: "error",
-      };
-    }
+    yield data;
+    if (data.length < limit) break;
   }
 }
