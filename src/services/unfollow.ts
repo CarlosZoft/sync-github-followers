@@ -1,16 +1,21 @@
+import { githubHeaders } from "@/config/github";
+
 export async function unfollowUser({ login }: { login: string }) {
-  const { ok, status } = await fetch(
+  const response = await fetch(
     `https://api.github.com/user/following/${login}`,
     {
-      headers: {
-        Authorization: `Bearer ${process.env.AUTH_GITHUB}`,
-      },
+      headers: githubHeaders(),
       method: "DELETE",
     }
   );
 
-  if (!ok) throw new Error("Error when trying to unfollow");
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(
+      `Error when trying to unfollow ${login} (${response.status} ${response.statusText}): ${body}`
+    );
+  }
 
-  console.log("User unfollowed!");
-  return { status };
+  console.log(`User unfollowed: ${login}`);
+  return { status: response.status };
 }
